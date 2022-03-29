@@ -1,7 +1,7 @@
 csrutil authenticated-root disable;
-diskutil mount /Volumes/tuthvn;
- Mount -uv /Volumes/tuthvn;	
- cd /Volumes/tuthvn/System/Library/LaunchAgents;
+diskutil mount /Volumes/diskMacOs;
+ Mount -uv /Volumes/diskMacOs;	
+ cd /Volumes/diskMacOs/System/Library/LaunchAgents;
 mkdir tmp;
 mv com.apple.ManagedClientAgent.* tmp/;
 mv com.apple.mdmclient.* tmp/;
@@ -9,4 +9,4 @@ cd ../LaunchDaemons;
 mkdir tmp;
 mv com.apple.ManagedClient.* tmp/;
 mv com.apple.mdmclient.* tmp/;
-bless --folder /Volumes/tuthvn/System/Library/CoreServices --bootefi --create-snapshot;
+bless --folder /Volumes/diskMacOs/System/Library/CoreServices --bootefi --create-snapshot;
